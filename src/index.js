@@ -1,18 +1,24 @@
 const express = require('express')
-const app = express()
 const bodyParser = require("body-parser");
+const path = require('path');
 const ordersRouter=require("./routes/ordersRoute");
-
+const connection = require('./connector')
 // const createDatabase = require('./createDatabase');
 
-require('dotenv').config();
+const app = express()
+
+app.set('view engine', 'ejs');
+
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') }); //dotenv is required to access the env file.
+
 // Parse JSON bodies (as sent by API clients)
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 app.use("/orders",ordersRouter);
-const connection = require('./connector')
 
 const port=process.env.PORT||5000;
+
 app.listen(port, () => console.log(`App listening on port ${port}!`))
-// createDatabase()   this line is to be uncommented when you want to create the table 
+// createDatabase()  --this line is to be uncommented when you want to create the table 
 module.exports = app;

@@ -1,4 +1,6 @@
 
+// This file is required to create the database with some predefined data
+
 let con = require('./connector')
 let data = require('./data')
 let a = async (err) => {

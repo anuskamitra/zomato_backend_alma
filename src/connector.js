@@ -1,12 +1,18 @@
 
+
+//This file is required to connect the database.
 var mysql = require('mysql');
+const path = require('path');
+
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
+
 
 
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Anuska@2024",
-    database: "testdb",
+    password:process.env.PASSWORD_OF_DATABASE,
+    database: process.env.DATABASE_NAME,
     multipleStatements: true,
    
 

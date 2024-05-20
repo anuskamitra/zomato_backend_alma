@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zomato Orders</title>
+    </head>
+    <body>
+        <% orders.forEach(order=>{ %>
+            <div>
+            <p><b>ID:</b> <%= order._id %></p>
+            <p><b>TITLE:</b> <%= order.title %></p>
+            <p><b>DECRIPTION:</b> <%= order.description %></p>
+            </div>
+            <hr>
+            <br>
+        <% }) %>
+    </body>
+</html>
