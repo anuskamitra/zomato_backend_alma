@@ -9,10 +9,11 @@ require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
 
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
+    host: process.env.HOST,
+    user: process.env.USER,
     password:process.env.PASSWORD_OF_DATABASE,
     database: process.env.DATABASE_NAME,
+    Port:process.env.DATABSE_PORT,
     multipleStatements: true,
    
 
