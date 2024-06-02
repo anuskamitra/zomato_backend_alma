@@ -10,7 +10,7 @@ This project is a Node.js application built with Express and MySQL. It exposes a
 GET: https://zomato-backend-alma.onrender.com
 
 ### Query Parameters:
-limit: Maximum number of records to return (default: 10).
+limit: Maximum number of records to return (default: 10).<br>
 offset: Number of records to skip before starting to return records (default: 0).
 
 ### Validation:
@@ -18,10 +18,10 @@ limit and offset must be positive integers.<br>
 Invalid values are replaced with default values.
 
 ### Responses:
-200: Success, returns an array of records.
-404: No data found.
-500: Internal server error.
+200: Success, returns an array of records.<br>
+404: No data found.<br>
+500: Internal server error.<br>
 
 ### Error Handling
-If the database connection fails, an appropriate error message is logged.
+If the database connection fails, an appropriate error message is logged.<br>
 Invalid limit and offset values are automatically replaced with default values.
