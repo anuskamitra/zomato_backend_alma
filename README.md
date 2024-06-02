@@ -14,7 +14,7 @@ limit: Maximum number of records to return (default: 10).
 offset: Number of records to skip before starting to return records (default: 0).
 
 ### Validation:
-limit and offset must be positive integers.
+limit and offset must be positive integers.<br>
 Invalid values are replaced with default values.
 
 ### Responses:
